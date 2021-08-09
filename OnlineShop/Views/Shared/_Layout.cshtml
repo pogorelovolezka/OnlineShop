@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    @await Html.PartialAsync("CssPartial")
+</head>
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+    <main>
+        @await Html.PartialAsync("HeaderPartial")
+        <section class="module-medium" id="demos">
+            <div>
+                <div class="row multi-columns-row">
+                    <div class="col-9">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="module-extra-small bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-8 col-lg-9">
+                        <div class="callout-text font-alt">
+                            <h4 style="margin-top: 0px;">Покупай только качественные вещи</h4>
+                            <p style="margin-bottom: 0px;">Скидка 50% только в этом месяце!</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" asp-area="" asp-controller="Home" asp-action="Index">Register</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        @await Html.PartialAsync("FooterPartial")
+    </main>
+    @await Html.PartialAsync("ScriptsPartial")
+</body>
+</html>

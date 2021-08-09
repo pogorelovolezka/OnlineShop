@@ -1,0 +1,33 @@
+﻿@model LoginViewModel
+<div class="module">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <hr class="divider-w mt-10 mb-20">
+                <form asp-area="" asp-controller="Account" asp-action="Login" method="post" asp-route-returnUrl="@ViewBag.returnUrl">
+                    <div class="div-box">
+                        <div asp-validation-summary="All"></div>
+                        <div>
+                            <label asp-for="UserName"></label>
+                            <input asp-for="UserName" />
+                            <span asp-validation-for="UserName"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Password"></label>
+                            <input asp-for="Password" />
+                            <span asp-validation-for="Password"></span>
+                        </div>
+                        <div>
+                            <label asp-for="RememberMe"></label>
+                            <input asp-for="RememberMe" />
+                            <span asp-validation-for="RememberMe"></span>
+                        </div>
+                        <div>
+                            <input type="submit" value="Войти" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

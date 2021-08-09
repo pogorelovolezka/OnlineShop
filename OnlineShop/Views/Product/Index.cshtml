@@ -1,0 +1,28 @@
+﻿@using OnlineShop.Domain.Entities
+@using OnlineShop.Models.ViewModels
+
+@*@model IQueryable<ProductItem>*@
+@{
+    ProductItem productItem = ViewBag.PageItem;
+
+    ViewBag.Title = "Product";
+    ViewBag.Description = "Description";
+    ViewBag.Keywords = "KeyWords";
+}
+
+@model ProductsListViewModel
+
+<div class="module">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <hr class="divider-w mt-10 mb-20">
+                @foreach (var p in Model.ProductItems)
+                {
+                    <partial name="ProductSummary" model="p" />
+                }
+            </div>
+        </div>
+        <div page-model="@Model.PagingInfo" page-action="Index"></div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sunset Store</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" asp-area="" asp-controller="Product" asp-action="Index" asp-route-id="">Товары</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Contact">Контакты</a>
+        <header id="header">
+            <h1><a href="/" id="logo">@Config.CompanyName</a></h1>
+            <nav id="nav">
+                <a asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                <a asp-area="" asp-controller="Product" asp-action="Index" asp-route-id="">Наши услуги</a>
+                <a asp-area="" asp-controller="Home" asp-action="Contact">Контакты</a>
+            </nav>
+        </header>
+    </div>
+</nav>
+<section class="bg-dark-30 showcase-page-header module parallax-bg img-block" src="~/assets/images/sunset.jpg">
+    <div class="titan-caption">
+        <div class="caption-content">
+            <div class="font-alt mb-30 titan-title-size-1">Только оригинал</div>
+            <div class="font-alt mb-40 titan-title-size-4">Номер один для тебя</div><a class="section-scroll btn btn-border-w btn-round" href="#demos">Смотреть</a>
+        </div>
+    </div>
+</section>
+<div class="main showcase-page">
+    <section class="module-extra-small bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-8 col-lg-9">
+                    <div class="callout-text font-alt">
+                        <h4 style="margin-top: 0px; font-;">Начни покупать сейчас!</h4>
+                        <p style="margin-bottom: 0px;">Скидка 50% только в этом месяце</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" asp-area="" asp-controller="Home" asp-action="Index">Our instagram</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+ </div>

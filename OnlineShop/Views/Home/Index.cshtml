@@ -1,0 +1,21 @@
+﻿@model PageItem
+@{
+    ViewBag.Title = Model.MetaTitle;
+    ViewBag.Description = Model.MetaDescription;
+    ViewBag.Keywords = Model.MetaKeywords;
+}
+
+
+<div class="module">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <hr class="divider-w mt-10 mb-20">
+                <div>
+                    <img src="~/assets/images/@Model.TitleImagePath" alt="" class="left" />
+                    @Html.Raw(Model.Text)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

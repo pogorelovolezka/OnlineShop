@@ -1,0 +1,28 @@
+﻿@using OnlineShop.Infrastructure
+@model ProductItem
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h4>
+            @Model.Title
+            <span class="badge badge-pill badge-primary" style="float:right">
+                <a asp-area="" asp-controller="Product" asp-action="Index" asp-route-id="@Model.Id">
+                    <img src="~/assets/images/@Model.TitleImagePath" alt="" class="left" />
+                </a>
+            </span>
+        </h4>
+    </div>
+    <div class="card-text p-1">@Model.MetaDescription</div>
+    <p>@Model.ProductPrice.ToString("c")</p>
+    <form id="@Model.Id" asp-page="/Cart" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" name="returnUrl"
+               value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+        <span class="card-text p-1">
+            @Model.MetaDescription
+            <button type="submit"
+                    class="btn btn-success btn-sm pull-right" style="float:right">
+                Add To Cart
+            </button>
+        </span>
+    </form>
+</div>

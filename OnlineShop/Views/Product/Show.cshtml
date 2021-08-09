@@ -1,0 +1,38 @@
+﻿@using OnlineShop.Domain.Entities
+@using OnlineShop.Infrastructure
+
+@model ProductItem
+@{
+    ViewBag.Title = Model.MetaTitle;
+    ViewBag.Description = Model.MetaDescription;
+    ViewBag.Keywords = Model.MetaKeywords;
+}
+
+<div>
+    <h2>
+        @Model.Title
+    </h2>
+    <h2>
+        @Model.Subtitle
+    </h2>
+    <h2>
+        @Model.ProductPrice
+    </h2>
+    <div>
+        <img class="img-block" src="~/assets/images/@Model.TitleImagePath" />
+    </div>
+</div>
+<div>
+    @Html.Raw(Model.Text)
+</div>
+<form id="@Model.Id" asp-page="/Cart" method="post">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" name="returnUrl"
+           value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+    <span class="card-text p-1">
+        <button type="submit"
+                class="btn btn-success btn-sm pull-right" style="float:right">
+            Add To Cart
+        </button>
+    </span>
+</form>
